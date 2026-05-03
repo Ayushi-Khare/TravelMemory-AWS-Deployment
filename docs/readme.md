@@ -312,4 +312,22 @@ Node Backend (PM2)
 MongoDB Atlas
 ```
 
+# 14. Cost Optimization
+
+To avoid unnecessary AWS charges:
+
+### Stop EC2 Instances
+aws ec2 stop-instances --instance-ids <id>
+
+### Delete Load Balancer (Important)
+ALB continues to incur cost even when idle.
+
+### Release Elastic IPs
+Unattached Elastic IPs are chargeable.
+
+### Recommended Workflow:
+1. Start resources before demo
+2. Stop/delete after use
+3. Recreate when needed
+
 
